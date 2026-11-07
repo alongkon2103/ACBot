@@ -1,0 +1,19 @@
+{
+  "name": "ac-entertainment-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "check": "node --check src/index.js && node --check src/features.js && node --check src/store.js && node --check src/console.js && node --check src/sent-editor.js && node --check scripts/setup-server.js",
+    "test": "node --test test/bot.test.js",
+    "setup:server": "node --env-file=.env scripts/setup-server.js && node --env-file=.env scripts/permissions.js",
+    "permissions:server": "node --env-file=.env scripts/permissions.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.28.1"
+  }
+}
